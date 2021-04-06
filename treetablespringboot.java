@@ -5,8 +5,8 @@ public Map getAllSkillTest(@PathVariable(value = "jobId") Long jobId) {
   Map<String, List> map = new HashMap<String, List>();
   List<Map<String, Object>> res = new ArrayList<>();
 
-   for (Skill sk: skill) {
-    Map < String, Object > skMap = new HashMap < > ();
+  for (Skill sk: skill) {
+    Map<String, Object> skMap = new HashMap<>();
 
     List<SkillDetail> skillDetail = skillDetailRepository.findBySkill(sk);
     Map<String, SkillDetail> sdMap = new HashMap<>();
